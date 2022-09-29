@@ -1,0 +1,17 @@
+server.port =9191
+spring.application.name= API-GATEWAY
+
+server.client.fetchRegistry=true
+server.client.registerWithEureka=true
+server.client.service-url.defaultZone=http://localhost:8761/eureka
+
+spring.cloud.gateway.routes[0].id=Department-service
+spring.cloud.gateway.routes[0].uri=lb://Department-service
+spring.cloud.gateway.routes[0].predicates[0].name=Path
+spring.cloud.gateway.routes[0].predicates[0].args[pattern]=/department/**
+
+spring.cloud.gateway.routes[1].id=User-service
+spring.cloud.gateway.routes[1].uri=lb://User-service
+spring.cloud.gateway.routes[1].predicates[0].name=Path
+spring.cloud.gateway.routes[1].predicates[0].args[pattern]=/user/**
+
