@@ -1,0 +1,14 @@
+spring.datasource.driver-class=oracle.jdbc.driver.OracleDriver
+spring.datasource.password=admin
+spring.datasource.username=dbo-microservices
+spring.datasource.url=jdbc:oracle:thin:@localhost:1521:xe
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.Oracle10gDialect
+spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto=update
+server.spring.application.name=User-Service
+server.spring.application.eureka=null
+server.client.fetchRegistry=true
+server.client.service-url.defaultZone=http://localhost:8761/eureka
+server.client.registerWithEureka=true
+server.port=7576
+
